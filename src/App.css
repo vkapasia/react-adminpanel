@@ -1,38 +1,138 @@
-.App {
-  text-align: center;
+.sidebarcolor{
+  color: #000000a8;
+}
+.topBox{
+  height: 300px;
+  width: 100%;
+  background-image: url('../src/storage/curved0.jpg');
+  background-position-y: 50%;
+  /* margin-bottom: 70px; */
+
+  background-size: cover;
+  background-position: 50%;
+  opacity: .8;
+  border-radius: 20px;
+}
+.mask{
+  position: absolute;
+  background-size: cover;
+  background-position: 50%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .8;
+  background-image: linear-gradient(310deg, #7928ca, #ff0080);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.innerbox{
+  margin-top: 220px;
+  height: 90px;
+  width: 100%;
+  background-color: #ffffffe0;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: #ccc;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.atag{
+  color: #cb0c9f !important;
+  text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.borderbtn{
+  border: 1px solid #cb0c9f !important;
+  background-color: white !important;
+  color: #cb0c9f !important;
+  border-radius: 12px !important;
+}
+
+.togglebtn{
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  background-color: white;
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: #ccc;
+
+}
+
+.avatar {
+  color: #fff;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size:1rem;
+  border-radius:.75rem;
+  height:48px;
+  width:48px;
+  transition: all .2s ease-in-out
 }
 
-.App-link {
-  color: #61dafb;
+.sidebar{
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  overflow: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 24px;
+  margin-right: 5px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 22px;
+  left: 4px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 24px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
